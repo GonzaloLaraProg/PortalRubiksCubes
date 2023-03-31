@@ -23,7 +23,7 @@
     </button>  
     <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
       <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="index.html">Inicio</a>
           </li>
         <li class="nav-item">
@@ -58,7 +58,7 @@
             <div class="card">
               <img src="img/cube3x3-removebg-preview.png" class="card-img-top" alt="Imagen 1">
               <h1>CUBO 3X3</h1>
-              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#">Ver solucion</a>
+              <a href="pdf/Rubiks_Solution-Guide_3x3.pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
               <!-- Contenido de la primera tarjeta -->
             </div>
           </div>
@@ -66,7 +66,7 @@
             <div class="card">
               <img src="img/cubo4x4-225-removebg-preview.png" class="card-img-top" alt="Imagen 2">
               <h1>CUBO 4X4</h1>
-              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#">Ver solucion</a>
+              <a href="pdf/Rubiks_Solution-Guide_4x4_Master.pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
               <!-- Contenido de la segunda tarjeta -->
             </div>
           </div>
@@ -74,7 +74,7 @@
             <div class="card">
               <img src="img/5x5Cube-removebg-preview.png" class="card-img-top" alt="Imagen 3">
               <h1>CUBO 5X5</h1>
-              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#">Ver solucion</a>
+              <a href="pdf/5x5-Método-para principiantes-(español).pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
               <!-- Contenido de la tercera tarjeta -->
             </div>
           </div>
@@ -89,10 +89,11 @@
     <p>Derechos reservados &copy; 2023</p>
   </footer>
 
-  <script src="js/scriptModal.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/scriptAlertas.js"></script>
 </body>
 </html>
