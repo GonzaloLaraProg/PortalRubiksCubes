@@ -22,6 +22,7 @@ nav {
   nav .navbar-toggler-icon {
     color: white;
   }
+  
 
   #IdNavImg{
     width: 30%;
@@ -47,6 +48,23 @@ nav {
   .card .card-body {
     font-size: 80%;
     padding: 10px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  .card h1 {
+    color: white;
+    text-align: center;
   }
   
   header {
