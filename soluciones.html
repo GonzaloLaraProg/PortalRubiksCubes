@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/estiloSoluciones.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-xxxx" crossorigin="anonymous">
   
 </head>
@@ -20,18 +20,17 @@
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-  
+    </button>  
     <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
       <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Comunidad</a>
+          <a class="nav-link" href="#">Comunidad</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cubos.html">Cubos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="soluciones.html">Soluciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Sugerencias</a>
@@ -44,15 +43,43 @@
 
   <!-- Header -->
   <header>
-    <div class="container">      
-      <h1>BIENVENIDOS </br> <img src="img/rubiks-logo.png" alt="Gif animado" id="ImgIndex"> </h1>
-      <img src="img/rubiks-cube-gif.gif" alt="Gif animado" id="ImgIndex">     
+    <div class="container">
+        <h1>SOLUCIONES</h1>   
+      <img src="img/rubiks-logo.png" alt="Gif animado" id="ImgIndex">        
     </div>
   </header>
 
   <!-- Contenido principal -->
   <div class="container">
     <!-- <p>Aquí iría el contenido principal de la página.</p> -->
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div class="card">
+              <img src="img/cube3x3-removebg-preview.png" class="card-img-top" alt="Imagen 1">
+              <h1>CUBO 3X3</h1>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#">Ver solucion</a>
+              <!-- Contenido de la primera tarjeta -->
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="card">
+              <img src="img/cubo4x4-225-removebg-preview.png" class="card-img-top" alt="Imagen 2">
+              <h1>CUBO 4X4</h1>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#">Ver solucion</a>
+              <!-- Contenido de la segunda tarjeta -->
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div class="card">
+              <img src="img/5x5Cube-removebg-preview.png" class="card-img-top" alt="Imagen 3">
+              <h1>CUBO 5X5</h1>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#">Ver solucion</a>
+              <!-- Contenido de la tercera tarjeta -->
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
   
@@ -62,12 +89,10 @@
     <p>Derechos reservados &copy; 2023</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/scriptModal.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
-
