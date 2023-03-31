@@ -35,6 +35,10 @@ nav {
     background-repeat: no-repeat;
   }
 
+  .card-container {
+    margin-top: 300px;
+    margin-bottom: 200px;
+  }
   .card {
     background-color: rgba(0,0,0,0.5);
     max-width: 400px;
@@ -77,10 +81,16 @@ nav {
   }
   
   header {
+    position: relative;
     background-color: #333333;
     color: #ffffff;
     padding: 20px;
     text-align: center;
+  }
+  .header-title {
+    position: absolute;
+    z-index: 2;
+    top: 0;
   }
   
   .container {
@@ -108,10 +118,13 @@ nav {
     text-align: center;
 
   }
+
+  
+
   #ImgIndex {
     width: 100%;
     max-width: 350px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   @media only screen and (max-width: 768px) {
     nav {
@@ -125,4 +138,4 @@ nav {
     }
   }
 
-  
+

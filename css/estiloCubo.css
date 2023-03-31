@@ -38,7 +38,7 @@ nav {
   .card {
     background-color: rgba(0,0,0,0.5);
     max-width: 400px;
-    max-height: 500px;
+    max-height: 500px;    
   }
   .card img {
     width: 100%;
