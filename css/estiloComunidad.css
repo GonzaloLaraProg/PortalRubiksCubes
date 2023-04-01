@@ -24,7 +24,33 @@
   }
   
   .carousel-item img {
-    height: 500px;
-    object-fit: cover;
+    width: 100%; /* Establece el ancho de la imagen al 100% */
+    height: auto; /* Establece la altura de la imagen automáticamente */
+    object-fit: contain; /* Ajusta el tamaño de la imagen manteniendo la relación de aspecto */
   }
+
+
+  .section.text-section {
+    background-color: white;
+  }
+  
+  .text-section .col-md-6 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-section .col-md-6:first-child {
+    order: 1;
+  }
+  
+  .text-section .col-md-6:last-child {
+    order: 2;
+  }
+  
+  .text-section .col-md-6:last-child p {
+    color: black;
+    font-size: 20px; /* Aumenta el tamaño de la letra */
+    text-align: justify; /* Justifica el texto */
+  }
+  
   
