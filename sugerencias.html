@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estiloSoluciones.css">
+  <link rel="stylesheet" href="css/estiloFormulario.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-xxxx" crossorigin="anonymous">
   
 </head>
@@ -27,13 +28,13 @@
             <a class="nav-link" href="index.html">Inicio</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="comunidad.html">Comunidad</a>
+          <a class="nav-link" href="soluciones.html">Soluciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cubos.html">Cubos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sugerencias.html">Sugerencias</a>
+          <a class="nav-link" href="comunidad.html">Comunidad</a>
         </li>
       </ul>
     </div>
@@ -44,43 +45,40 @@
   <!-- Header -->
   <header>
     <div class="container">
-        <h1>SOLUCIONES <br> <img src="img/rubiks-logo.png" alt="Gif animado" id="ImgIndex"> </h1>   
+        <h1>Sugerencias <br> <img src="img/rubiks-logo.png" alt="Gif animado" id="ImgIndex"> </h1>   
               
     </div>
   </header>
 
   <!-- Contenido principal -->
+
   <div class="container">
-    <!-- <p>Aquí iría el contenido principal de la página.</p> -->
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-4">
-            <div class="card">
-              <img src="img/cube3x3-removebg-preview.png" class="card-img-top" alt="Imagen 1">
-              <h1>CUBO 3X3</h1>
-              <a href="pdf/Rubiks_Solution-Guide_3x3.pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
-              <!-- Contenido de la primera tarjeta -->
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="purple-background">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Nombre</label>
+              <input type="text" class="form-control" id="inputName" >
             </div>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="card">
-              <img src="img/cubo4x4-225-removebg-preview.png" class="card-img-top" alt="Imagen 2">
-              <h1>CUBO 4X4</h1>
-              <a href="pdf/Rubiks_Solution-Guide_4x4_Master.pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
-              <!-- Contenido de la segunda tarjeta -->
+            <div class="form-group">
+              <label for="inputEmail">Correo electrónico</label>
+              <input type="email" class="form-control" id="inputEmail" >
             </div>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="card">
-              <img src="img/5x5Cube-removebg-preview.png" class="card-img-top" alt="Imagen 3">
-              <h1>CUBO 5X5</h1>
-              <a href="pdf/5x5-Método-para-principiantes-(español).pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
-              <!-- Contenido de la tercera tarjeta -->
+            <div class="form-group">
+              <label for="inputMessage">Mensaje</label>
+              <textarea class="form-control" id="inputMessage" rows="3" ></textarea>
             </div>
-          </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
         </div>
       </div>
+    </div>
   </div>
+  
+
+  
+  
 
   
   <!-- Footer -->
@@ -89,11 +87,13 @@
     <p>Derechos reservados &copy; 2023</p>
   </footer>
 
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/scriptAlertas.js"></script>
+  <script src="js/scriptFormulario.js"></script>
+
 </body>
 </html>
