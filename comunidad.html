@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estiloSoluciones.css">
+  <link rel="stylesheet" href="css/estiloComunidad.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-xxxx" crossorigin="anonymous">
   
 </head>
@@ -27,7 +28,7 @@
             <a class="nav-link" href="index.html">Inicio</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="comunidad.html">Comunidad</a>
+          <a class="nav-link" href="soluciones.html">Soluciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cubos.html">Cubos</a>
@@ -44,43 +45,50 @@
   <!-- Header -->
   <header>
     <div class="container">
-        <h1>SOLUCIONES <br> <img src="img/rubiks-logo.png" alt="Gif animado" id="ImgIndex"> </h1>   
+        <h1>COMUNIDAD <br> <img src="img/rubiks-logo.png" alt="Gif animado" id="ImgIndex"> </h1>   
               
     </div>
   </header>
 
   <!-- Contenido principal -->
-  <div class="container">
-    <!-- <p>Aquí iría el contenido principal de la página.</p> -->
+  <div class="section video-section">
+    <video src="media/rubiks-hero-banner.mp4" autoplay loop muted></video>
+  </div>
+  
+  <div class="section text-section">
     <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-4">
-            <div class="card">
-              <img src="img/cube3x3-removebg-preview.png" class="card-img-top" alt="Imagen 1">
-              <h1>CUBO 3X3</h1>
-              <a href="pdf/Rubiks_Solution-Guide_3x3.pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
-              <!-- Contenido de la primera tarjeta -->
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="card">
-              <img src="img/cubo4x4-225-removebg-preview.png" class="card-img-top" alt="Imagen 2">
-              <h1>CUBO 4X4</h1>
-              <a href="pdf/Rubiks_Solution-Guide_4x4_Master.pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
-              <!-- Contenido de la segunda tarjeta -->
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="card">
-              <img src="img/5x5Cube-removebg-preview.png" class="card-img-top" alt="Imagen 3">
-              <h1>CUBO 5X5</h1>
-              <a href="pdf/5x5-Método-para-principiantes-(español).pdf" class="btn btn-primary" onclick="mostrarMensaje()" target="_blank">Ver solucion</a>
-              <!-- Contenido de la tercera tarjeta -->
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/cube3x3-removebg-preview.png" alt="Imagen">
+        </div>
+        <div class="col-md-6">
+          <p>Tu texto aquí</p>
         </div>
       </div>
+    </div>
   </div>
+  
+  <div class="section carousel-section">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/cube3x3-removebg-preview.png" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/cubo4x4-225-removebg-preview.png" class="d-block w-100" alt="Imagen 2">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </div>
+  
 
   
   <!-- Footer -->
@@ -95,5 +103,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/scriptAlertas.js"></script>
+  <script src="js/scriptCarrusel.js"></script>
 </body>
 </html>
