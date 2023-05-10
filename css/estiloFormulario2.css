@@ -1,0 +1,85 @@
+.purple-background {
+  background-color: rgba(147, 112, 219, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.purple-background form {
+  color: white;
+}
+
+.purple-background label {
+  font-weight: bold;
+}
+body{
+  background-color: black;
+}
+
+.purple-background input[type="text"],
+.purple-background input[type="email"],
+.purple-background textarea {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 10px;
+}
+.purple-background {
+  background-color: rgba(147, 112, 219, 0.7);
+  padding-right: 100px;
+  padding-left: 100px;
+  border-radius: 10px;
+  width: 400%;
+  max-width: 600px;
+  margin-left: -150px ;
+}
+
+.purple-background input[type="text"]:focus,
+.purple-background input[type="email"]:focus,
+.purple-background textarea:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+  outline: none;
+}
+
+.purple-background button[type="submit"] {
+  background-color: white;
+  color: #3f3d56;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.purple-background button[type="submit"]:hover {
+  background-color: #3f3d56;
+  color: white;
+  cursor: pointer;
+}
+.purple-background input[type="password"],
+.purple-background textarea {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 35px;
+}
+.purple-background input[type="password"]:focus,
+.purple-background textarea:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+  outline: none;
+}
+
+
+
+
+@media (max-width: 576px) {
+  .purple-background {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+  
