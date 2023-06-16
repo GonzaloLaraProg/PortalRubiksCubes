@@ -1,0 +1,91 @@
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+
+}
+  #IdNavImg{
+    width: 30%;
+  }
+  .card {
+    background-color: rgba(0,0,0,0.5);
+    max-width: 400px;
+    max-height: 500px;    
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card .card-body {
+    font-size: 80%;
+    padding: 10px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  .card h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+
+  }
+  #ImgIndex {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    nav a {
+      flex-basis: auto;
+      margin: 5px 0;
+    }
+  }
+  

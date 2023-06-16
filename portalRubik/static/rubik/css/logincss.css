@@ -1,0 +1,41 @@
+form {
+    background-color: #5151e7;  /* Fondo morado claro */
+    padding: 20px;
+  }
+  
+  form label {
+    color: #ffffff;  /* Letras blancas */
+  }
+  
+  form .btn-primary {
+    background-color: #5f9ea0;  /* Fondo morado */
+    color: #ffffff;  /* Letras blancas */
+  }
+  
+  form a {
+    color: #ffffff;  /* Letras blancas */
+  }
+
+  .card {
+    background-color: rgba(147, 112, 219, 0.7)
+  }
+  
+  header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  
+  }
+    #IdNavImg{
+      width: 30%;
+    }
+
+    body {
+      background-color: #000000;
+      background-image: url('../img/fondoWave.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+  

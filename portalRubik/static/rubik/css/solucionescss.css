@@ -1,0 +1,111 @@
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+  body {
+    background-color: #000000;
+    background-image: url('../img/fondoWave.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .card-container {
+    margin-top: 300px;
+    margin-bottom: 200px;
+  }
+  .card {
+    background-color: rgba(0,0,0,0.5);
+    max-width: 400px;
+    max-height: 500px;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card .card-body {
+    font-size: 80%;
+    padding: 10px;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  .card h1 {
+    color: white;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    text-align: center; /* Centra el contenido dentro del div */
+  }
+  
+  header {
+    position: relative;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  .header-title {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+
+  
+  header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+
+  }
+
+  
+
+  #ImgIndex {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
+
+

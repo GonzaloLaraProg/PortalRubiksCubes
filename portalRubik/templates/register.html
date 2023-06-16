@@ -1,0 +1,25 @@
+{% extends 'base.html' %}  <!-- Extiende tu plantilla base o usa otra plantilla existente -->
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/registrousercss.css' %}">
+  <div class="container">
+    <h1>Registro <br> <img src="{% static 'img/rubiks-logo.png' %}" alt="Gif animado" id="ImgIndex"></h1>   
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="card text-center">
+      <div class="card-body">
+        <form method="POST" class="mx-auto">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

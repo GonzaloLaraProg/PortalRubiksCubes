@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+
+{% block header %}
+  <header>
+    <div class="container">
+      <h1>COMUNIDAD <br> <img src="{% static '/rubik/img/rubiks-logo.png' %}" alt="Gif animado" id="ImgIndex"> </h1>   
+    </div>
+  </header>
+  <style>
+    
+    header {
+      position: relative;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    } 
+    
+    .header-title {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+    } 
+    
+    .container {
+      padding: 20px;
+    } 
+  </style>
+{% endblock %}
+
+{% block content %}
+{% comment %} <link rel="stylesheet" href="{% static '/rubik/css/comunidadcss.css' %}"> {% endcomment %}
+<script src="{% static 'js/scriptCarrusel.js' %}"></script>
+  <!-- Contenido principal -->
+  <div class="section video-section">
+    <video src="{% static 'media/rubiks-hero-banner.mp4' %}" autoplay loop muted></video>
+  </div>
+  
+  <div class="section text-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{% static 'img/creadorRubik.webp' %}" alt="Imagen">
+        </div>
+        <div class="col-md-6">
+          <p>¿De dónde es el cubo de Rubik? <br>
+             ¿Quién lo inventó?<br>
+              ¿Busca más información sobre el cubo de Rubik?<br>
+              <br>
+               ¡Has venido al lugar correcto!<br>
+               <br>
+            El cubo de Rubik fue inventado en 1974 por Ernõ Rubik, un profesor de arquitectura húngaro.
+             Rubik luego usó el Cubo como un ejercicio de aprendizaje para enseñar a sus alumnos sobre espacios tridimensionales .
+              ¡No sabía que su "Cubo Mágico" (como lo llamó originalmente) se convertiría en uno de los rompecabezas más famosos del mundo de todos los tiempos!
+              <br>
+            En la década de 1980, el cubo de Rubik era una moda mundial que vendía millones de cubos cada año y cimentaba su legado en la cultura pop.
+             Presentado en Los Simpson, The Big Bang Theory, un video musical de Spice Girls y las principales películas de Hollywood, la popularidad del Cubo de Rubik siguió creciendo en todo el mundo.
+             <br>
+            Hoy en día, el Cubo de Rubik es venerado como uno de los juguetes más queridos de todos los tiempos.
+             Cada año, se venden, resuelven y comparten millones de cubos entre amigos, familiares y buscadores de rompecabezas por igual.
+             <br>
+             ¡Entonces, únase a la comunidad de Cube y forme parte de la historia!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section carousel-section">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/creadorRubik1.jpg' %}" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/CUBO-RUBIK-JUGUETE-PARDTREKSKONOCIMIENTO-ID-1024x576.jpg' %}" class="d-block w-100" alt="Imagen 2">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background-image: url({% static 'img/fondoWave.gif' %});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .video-section {
+      height: 500px;
+      background-color: #000;
+    }
+    
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } 
+    
+
+    .text-section {
+      padding: 50px 0;
+      background-color: #f5f5f5;
+    }
+    
+    .text-section img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .carousel-section {
+      padding: 50px 0;
+    }
+    
+    .carousel-item img {
+      width: 100%; /* Establece el ancho de la imagen al 100% */
+      height: auto; /* Establece la altura de la imagen automáticamente */
+      object-fit: contain; /* Ajusta el tamaño de la imagen manteniendo la relación de aspecto */
+    }
+  
+  
+    .section.text-section {
+      background-color: white;
+    }
+    
+    .text-section .col-md-6 {
+      display: flex;
+      align-items: center;
+    }
+    
+    .text-section .col-md-6:first-child {
+      order: 1;
+    }
+    
+    .text-section .col-md-6:last-child {
+      order: 2;
+    }
+    
+    .text-section .col-md-6:last-child p {
+      color: black;
+      font-size: 20px; /* Aumenta el tamaño de la letra */
+      text-align: justify; /* Justifica el texto */
+    }   
+    
+  </style>
+
+{% endblock %}

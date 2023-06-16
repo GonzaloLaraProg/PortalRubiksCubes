@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block header %}
+
+<header>
+  <div class="container">
+    <h1>CUBOS</h1>
+    <img src="{% static 'img/rubiks-logo.png' %}" alt="Gif animado" id="ImgIndex">
+  </div>
+</header>
+
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/cubocss.css' %}">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <img src="{% static 'img/cube3x3-removebg-preview.png' %}" class="card-img-top" alt="Imagen 1">
+        <h1>CUBO 3X3</h1>
+        <!-- Contenido de la primera tarjeta -->
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <img src="{% static 'img/cubo4x4-225-removebg-preview.png' %}" class="card-img-top" alt="Imagen 2">
+        <h1>CUBO 4X4</h1>
+        <!-- Contenido de la segunda tarjeta -->
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <img src="{% static 'img/5x5Cube-removebg-preview.png' %}" class="card-img-top" alt="Imagen 3">
+        <h1>CUBO 5X5</h1>
+        <!-- Contenido de la tercera tarjeta -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <img src="{% static 'img/formatoICO.ico' %}" class="card-img-top" alt="Imagen 4">
+        <h1>PROXIMAMENTE</h1>
+        <!-- Contenido de la CUARTA tarjeta -->
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <img src="{% static 'img/formatoICO.ico' %}" class="card-img-top" alt="Imagen 5">
+        <h1>PROXIMAMENTE</h1>
+        <!-- Contenido de la QUINTA tarjeta -->
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card">
+        <img src="{% static 'img/formatoICO.ico' %}" class="card-img-top" alt="Imagen 6">
+        <h1>PROXIMAMENTE</h1>
+        <!-- Contenido de la SEXTA tarjeta -->
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+    body {
+      background-image: url({% static 'img/fondoWave.gif' %});
+      background-repeat: no-repeat;
+      background-size: cover;
+    }    
+  </style>
+{% endblock %}
