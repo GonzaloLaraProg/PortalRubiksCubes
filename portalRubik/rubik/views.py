@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm
 from crispy_forms.helper import FormHelper
+from django.contrib.auth.models import User
+from django.db import IntegrityError
 
 
 # Create your views here.
@@ -26,6 +28,55 @@ def vista_soluciones_cubos(request):
 def vista_sugerencias(request):
     return render(request, 'sugerencias.html')
 
+def user_list(request):
+    search_term = request.GET.get('search', '')
+    users = User.objects.filter(username__icontains=search_term)
+    return render(request, 'user_list.html', {'users': users, 'search': search_term})
+
+def user_create(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            try:
+                user = form.save(commit=False)
+                if request.POST.get('is_superuser') == 'on':
+                    user.is_superuser = True
+                    user.is_staff = True
+                user.save()
+                return redirect('list_users')
+            except IntegrityError:
+                form.add_error('username', 'El nombre de usuario ya está en uso.')
+    else:
+        form = UserCreationForm()
+
+    return render(request, 'user_create.html', {'form': form})
+
+def user_delete(request, user_id):
+    user = User.objects.get(id=user_id)
+    user.delete()
+    return redirect('list_users')
+
+
+def user_update(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    if request.method == 'POST':
+        form = UserChangeForm(request.POST, instance=user)
+        if form.is_valid():
+            # Verificar si se cambió el nombre de usuario
+            new_username = form.cleaned_data.get('username')
+            if new_username != user.username:
+                # Verificar si ya existe otro usuario con el mismo nombre
+                if User.objects.filter(username=new_username).exists():
+                    error = "El nombre de usuario ya está en uso."
+                    return render(request, 'update_user.html', {'form': form, 'user': user, 'error': error})
+
+            form.save()
+            return redirect('list_users')
+    else:
+        form = UserChangeForm(instance=user)
+    
+    return render(request, 'update_user.html', {'form': form, 'user': user})
 
 def registrar(request):
     if request.method == "POST":

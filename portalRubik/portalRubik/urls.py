@@ -31,7 +31,14 @@ urlpatterns = [
     # path('sugerencias/', views.vista_sugerencias, name='sugerencias'),
     path('user/signup/', views.registrar, name='register'),
     path('user/login', views.login_view, name='login'),
-     path('user/logout', views.logout_view, name='logout'),
+    path('user/logout', views.logout_view, name='logout'),
+
+    path('superuser/create-users', views.user_create, name='create_users'),
+    path('superuser/list-users', views.user_list, name='list_users'),
+     path('superuser/<int:user_id>/delete/', views.user_delete, name='user_delete'),
+     path('superuser/update/<int:user_id>/', views.user_update, name='update_user'),
+    # path('superuser/update-users', views.user_update, name='update_users'),
+
 
     
 ]

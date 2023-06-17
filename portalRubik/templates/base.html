@@ -34,7 +34,6 @@
             {% if user.is_authenticated %}
             <a class="dropdown-item" href="{% url 'wcaApi' %}">WCA Competiciones</a>
             {% endif %}
-            {% comment %} <a class="dropdown-item" href="{% url 'formulario' %}">Registrate</a>  {% endcomment %}
           </div>
         </li>
         <li class="nav-item">
@@ -45,9 +44,16 @@
           <a class="nav-link" href="{% url 'soluciones' %}">Soluciones</a>
         </li>
         {% endif %}
-        {% comment %} <li class="nav-item">
-          <a class="nav-link" href="{% url 'sugerencias' %}">Sugerencias</a>
-        </li>  {% endcomment %}
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdownAdmin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Panel de administracion
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownAdmin">
+            <a class="dropdown-item" href="{% url 'list_users' %}">Usuarios</a>          
+          </div>
+        </li>
+        {% endif %}  
         {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">Cerrar sesion</a>
