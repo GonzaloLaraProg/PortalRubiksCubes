@@ -5,6 +5,7 @@ from crispy_forms.helper import FormHelper
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from .forms import CustomUserChangeForm
+from django.contrib import messages
 
 # Create your views here.
 def vista_index(request):
@@ -43,6 +44,7 @@ def user_create(request):
                     user.is_superuser = True
                     user.is_staff = True
                 user.save()
+                messages.success(request, "Usuario Creado exitosamente.")
                 return redirect('list_users')
             except IntegrityError:
                 form.add_error('username', 'El nombre de usuario ya está en uso.')
@@ -54,6 +56,7 @@ def user_create(request):
 def user_delete(request, user_id):
     user = User.objects.get(id=user_id)
     user.delete()
+    messages.success(request, "Usuario eliminado exitosamente.")
     return redirect('list_users')
 
 
@@ -62,12 +65,14 @@ def user_update(request, user_id):
 
     if '/password/' in request.path:
         error = "No se pueden cambiar las contraseñas desde esta página."
-        return render(request, 'update_user.html', {'user': user, 'error': error})
+        messages.error(request, error)
+        return redirect('list_users')
 
     if request.method == 'POST':
         form = CustomUserChangeForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
+            messages.success(request, "Usuario actualizado exitosamente.")
             return redirect('list_users')
     else:
         form = CustomUserChangeForm(instance=user)
@@ -86,7 +91,7 @@ def registrar(request):
 
             user = authenticate(username=username,password=password)
             login(request,user)
-
+            messages.success(request, "Te registraste exitosamente.")
             return redirect('index')
         else:
             return render(request,"register.html", {'form':form})

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+
 {% block header %}
     <link rel="stylesheet" href="{% static 'css/listar_user_css.css' %}">
 {% endblock %}
@@ -13,47 +15,50 @@
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
 
-    <table class="user-table">
-        <thead>
-            <tr>
-                <th>Usuario</th>
-                <th>Tipo de Usuario</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
+    <div class="table-container">
+        <table class="user-table">
+            <thead>
                 <tr>
-                    <td>{{ user.username }}</td>
-                    <td>
-                        {% if user.is_superuser %}
-                            Usuario Admin
-                        {% comment %} {% elif user.is_staff %}
-                            Staff {% endcomment %}
-                        {% else %}
-                            Usuario Normal
-                        {% endif %}
-                    </td>
-                    <td>
-                        {% if not user.is_superuser %}
-                        <form method="POST" action="{% url 'user_delete' user.id %}">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
-                        </form>
-                        <a href="{% url 'update_user' user.id %}" class="btn btn-primary">Actualizar</a>
-                        {% else %}
-                            Sin acciones
-                        {% endif %}
-                    </td>
-                    {% comment %} <td>
-                        {% if not user.is_superuser %}
-                            <a href="{% url 'update_user' user.id %}" class="btn btn-primary">Actualizar</a>
-                        {% endif %}
-                    </td> {% endcomment %}
+                    <th>Usuario</th>
+                    <th>Tipo de Usuario</th>
+                    <th>Acciones</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>
+                            {% if user.is_superuser %}
+                                Usuario Admin
+                            {% comment %} {% elif user.is_staff %}
+                                Staff {% endcomment %}
+                            {% else %}
+                                Usuario Normal
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if not user.is_superuser %}
+                            {% comment %} <form method="POST" action="{% url 'user_delete' user.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Eliminar</button> {% endcomment %}
+                                <a href="#" onclick="eliminarUsuario({{user.id}})"  class="btn btn-danger">Eliminar</a>
+                                <a href="{% url 'update_user' user.id %}" class="btn btn-primary">Actualizar</a>
+                            </form>
+                            {% else %}
+                                Sin acciones
+                            {% endif %}
+                        </td>
+                        {% comment %} <td>
+                            {% if not user.is_superuser %}
+                                <a href="{% url 'update_user' user.id %}" class="btn btn-primary">Actualizar</a>
+                            {% endif %}
+                        </td> {% endcomment %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>    
     <a href="{% url 'create_users' %}" class="btn btn-primary">Crear Usuario</a>
     <style>
           
@@ -64,4 +69,8 @@
         background-repeat: no-repeat;
       }
     </style>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/alertaEliminar.js' %}"></script>
 {% endblock %}
