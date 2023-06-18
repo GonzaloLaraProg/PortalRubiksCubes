@@ -1,0 +1,24 @@
+.card {
+    background-color: rgba(147, 112, 219, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  form label {
+    color: #000000;
+  }
+  
+  form .btn-primary {
+    background-color: #5f9ea0;
+    color: #ffffff;
+  }
+  
+  form a {
+    color: #ffffff;
+  }

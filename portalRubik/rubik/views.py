@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, User
 from crispy_forms.helper import FormHelper
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-
+from .forms import CustomUserChangeForm
 
 # Create your views here.
 def vista_index(request):
@@ -60,21 +60,17 @@ def user_delete(request, user_id):
 def user_update(request, user_id):
     user = get_object_or_404(User, id=user_id)
 
-    if request.method == 'POST':
-        form = UserChangeForm(request.POST, instance=user)
-        if form.is_valid():
-            # Verificar si se cambió el nombre de usuario
-            new_username = form.cleaned_data.get('username')
-            if new_username != user.username:
-                # Verificar si ya existe otro usuario con el mismo nombre
-                if User.objects.filter(username=new_username).exists():
-                    error = "El nombre de usuario ya está en uso."
-                    return render(request, 'update_user.html', {'form': form, 'user': user, 'error': error})
+    if '/password/' in request.path:
+        error = "No se pueden cambiar las contraseñas desde esta página."
+        return render(request, 'update_user.html', {'user': user, 'error': error})
 
+    if request.method == 'POST':
+        form = CustomUserChangeForm(request.POST, instance=user)
+        if form.is_valid():
             form.save()
             return redirect('list_users')
     else:
-        form = UserChangeForm(instance=user)
+        form = CustomUserChangeForm(instance=user)
     
     return render(request, 'update_user.html', {'form': form, 'user': user})
 
