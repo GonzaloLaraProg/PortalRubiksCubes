@@ -15,7 +15,7 @@
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
 
-    <div class="table-container">
+    <div class="container">
         <table class="user-table">
             <thead>
                 <tr>
@@ -61,6 +61,27 @@
     </div>    
     <a href="{% url 'create_users' %}" class="btn btn-primary">Crear Usuario</a>
     <style>
+
+        .container{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #6114f0;
+        }
+        
+        th {
+            background-color: #2500f7;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
           
       body {
         background-color: #000000;
@@ -68,6 +89,7 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+      
     </style>
 {% endblock %}
 
